@@ -7,18 +7,18 @@ class Timer
   end
 
   def format(number)
-    if number.to_s.length == 1
-      "0" + number.to_s
-    elsif
-      number.to_s
+    if number < 10
+      "0#{number}"
+    else
+      "#{number}"
     end
   end
 
   def time_string
-    hours = @seconds / 3600
-    minutes = (@seconds % 3600) / 60
-    seconds = @seconds % 60
-    "#{ format(hours) }:#{ format(minutes) }:#{ format(seconds) }"
+    hour = @seconds / 3600
+    minute = (@seconds % 3600) / 60
+    second = (@seconds % 60)
+    "#{ format(hour) }:#{ format(minute) }:#{ format(second) }"
   end
 
 end

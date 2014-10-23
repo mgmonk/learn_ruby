@@ -24,7 +24,7 @@ describe "Timer" do
       @timer.time_string.should == "00:00:00"
     end
 
-    xit "should display 12 seconds as 00:00:12" do
+    it "should display 12 seconds as 00:00:12" do
       @timer.seconds = 12
       @timer.time_string.should == "00:00:12"
     end
